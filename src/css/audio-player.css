@@ -1,0 +1,231 @@
+audio {
+  width: 100%;
+}
+
+* {
+  outline: 0;
+}
+
+[disabled] {
+  cursor: default !important;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+[disabled]::-webkit-slider-thumb {
+  cursor: default !important;
+}
+
+.audio-player {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 4px;
+  font-family: Arial;
+  background: #222230;
+  overflow: hidden;
+}
+
+.audio-player > * {
+  background-color: transparent;
+}
+
+.audio-player .button {
+  border: 0;
+  height: 30px;
+  border-right: 1px solid #66697a;
+  display: grid;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.audio-player .time {
+  border-left: 1px solid #66697a;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 0.75em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75px;
+          flex: 0 0 75px;
+}
+
+.audio-player .volume {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45px;
+          flex: 0 0 45px;
+  position: relative;
+}
+
+.audio-player .volume svg {
+  position: absolute;
+  left: 5px;
+  margin: auto;
+  height: 31px;
+  width: 31px;
+}
+
+.audio-player .volume input {
+  cursor: pointer;
+}
+
+.audio-player .volume input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 0;
+  /* Set a specific slider handle width */
+  height: 0;
+  /* Slider handle height */
+}
+
+.audio-player .volume input::-moz-range-thumb {
+  width: 0;
+  /* Set a specific slider handle width */
+  height: 0;
+  /* Slider handle height */
+  border: 0;
+}
+
+.audio-player button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0px;
+          flex: 0 0 0;
+}
+
+.audio-player .slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.audio-player svg {
+  margin: auto;
+}
+
+.audio-player button {
+  cursor: pointer;
+}
+
+.audio-player button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.audio-player ul {
+  border-top: 1px solid #66697a;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: calc(100%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.audio-player ul li {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #66697a;
+  padding: 0 5px;
+}
+
+.audio-player ul li:hover, .audio-player ul li.current {
+  color: #47cdff;
+}
+
+.range {
+  padding: 0 5px;
+  display: grid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.range input[type=range] {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.range input[type=range]::-moz-range-track {
+  background-color: transparent;
+}
+
+.slider:before, .slider .complete {
+  position: absolute;
+  left: 5px;
+  height: 4px;
+  top: 50%;
+  margin-top: -2px;
+  border-radius: 10px;
+  width: calc(100% - 10px);
+}
+
+.slider:before {
+  content: "";
+  background: #66697a;
+  /* Grey background */
+}
+
+.slider .complete {
+  background: #47cdff;
+  z-index: 1;
+  width: 0;
+}
+
+.slider input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 12px;
+  /* Set a specific slider handle width */
+  height: 12px;
+  /* Slider handle height */
+  border-radius: 50%;
+  background: #47cdff;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.slider input::-moz-range-thumb {
+  width: 12px;
+  /* Set a specific slider handle width */
+  height: 12px;
+  /* Slider handle height */
+  border-radius: 50%;
+  background: #47cdff;
+  /* Green background */
+  border: 0;
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFF;
+}

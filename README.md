@@ -8,7 +8,8 @@
 
 ### Prerequisites
   
-  You need node.js and npm for development. You can get them [here](https://nodejs.org/).
+  You need [node.js](https://nodejs.org/) for development.
+  
   I used **laravel-mix** standalone for its webpack module to complie **jsx** and **scss**.
   
   Just write in **terminal (cmd)** `npm run watch` for development and `npm run production` for release version

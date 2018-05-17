@@ -18,14 +18,14 @@
 
   Add to your `<head>`
   
-```
+```html
   <link href="src/css/audio-player.css" type="text/css" rel="stylesheet">
   <script src="src/js/app.js"></script>
 ```
 
   To create a player
 
-```
+```html
   <script>
       // list all audio you would like to play
       let playList = [
